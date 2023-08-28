@@ -1,0 +1,124 @@
+@charset "utf-8";
+@import url(reset.css);
+
+.mobile {
+    display: none;
+}
+
+/* header */
+header {
+    height: 100px;
+}
+
+header .inner {
+    height: 100%;/* height값이 있어야 밑에 자식들이 정렬을 할 수 있다 */
+    align-items: center;
+    max-width: 1280px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .inner .pc .gnb .depth01 {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+
+
+
+header .inner .pc .gnb .depth01 > a {
+    padding : 0 30px;
+    line-height: 100px;
+    display: block;
+}
+
+
+header .inner .pc .gnb .depth01 .depth02 {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: skyblue;
+    display: none;
+}
+
+header .inner .pc .gnb .depth01 .depth02 li {
+    padding: 10px 0;
+}
+
+.main_visual {
+    height: 100vh;
+}
+
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width:1024px) {
+    .pc{display: none;}
+    .mobile {display: block;}
+
+    .mobile_gnb {
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        background-color: #fff;
+        color: #000;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .menu_open {
+        cursor: pointer;
+        background-color: tomato;
+        color: #fff;
+        width: 80px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+        font-size: 18px;
+      
+    }
+
+    .mobile_gnb .menu_close {
+        background-color: tomato;
+        color: #fff;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    .mobile_gnb .depth01 > a {
+        background-color: #333;
+        color: #fff;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        display: block;
+        border: 1px solid #fff;
+        margin-bottom: 5px;
+    }
+
+    .mobile_gnb .depth01 .depth02 {
+        display: none;
+    }
+
+    .mobile_gnb .depth01 .depth02 li {
+        background-color: bisque;
+        color: #333;
+        height: 40px;
+        line-height: 40px;
+        border: 1px dotted #333;
+    }
+    
+}
